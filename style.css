@@ -1,0 +1,169 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* === Variables === */
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+/* === Global === */
+body {
+  font: 400 0.9375rem "Lexend Deca", sans-serif;
+
+  background: var(--light-gray);
+  height: 100%;
+}
+
+.section {
+  padding: 3rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+h1 {
+  position: absolute;
+
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border-width: 0;
+
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+h2 {
+  font: 700 2.5rem "Big Shoulders Display", sans-serif;
+  color: var(--light-gray);
+
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--transparent-white);
+
+  line-height: 1.5rem;
+}
+
+/* === Buttons === */
+#card .button {
+  margin-top: 1.5rem;
+}
+
+#card .button a {
+  background: var(--light-gray);
+
+  display: inline-block;
+
+  padding: 1rem 1.75rem;
+  border: 0.15rem solid transparent;
+  border-radius: 2.5rem;
+
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#card .button a:hover {
+  color: var(--light-gray);
+
+  background: transparent;
+
+  border-color: var(--light-gray);
+}
+
+/* === Card === */
+#card {
+  width: min(87.5vw, 450px);
+
+  margin: 0 auto;
+  padding: 6rem 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Sedans === */
+#sedans {
+  background: var(--orange);
+
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+#sedans .button a {
+  color: var(--orange);
+}
+
+/* === SUVs === */
+#suvs {
+  background: var(--cyan);
+}
+
+#suvs .button a {
+  color: var(--cyan);
+}
+
+/* === Luxury === */
+#luxury {
+  background: var(--dark-cyan);
+
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+#luxury .button a {
+  color: var(--dark-cyan);
+}
+
+/* === Responsive === */
+@media (min-width: 769px) {
+  /* === Buttons === */
+  #card .button {
+    margin-top: 5rem;
+  }
+
+  /* === Card === */
+  #card {
+    flex-direction: row;
+
+    margin: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    width: min(97.5vw, 56.875rem);
+  }
+
+  /* === Sedans === */
+  #sedans {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  /* === Luxury === */
+  #luxury {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
+
+/* === Attribution ===
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); } */
